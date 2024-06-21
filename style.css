@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  --grey-light: rgba(255, 240, 250, 0.25);
+  --violet-base: #9e0fbc;
+  --space-m: 1.5rem;
+}
+
+body {
+  padding: 3rem 1rem;
+  max-width: 600px;
+  margin: auto;
+  background: #242b35;
+  color: white;
+  display: flex;
+  gap: var(--space-m);
+  flex-direction: column;
+  place-items: center;
+  font-family: "Platypi", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+main,
+section,
+fieldset,
+header {
+  width: 100%;
+}
+
+figure,
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: var(--space-m);
+}
+
+fieldset div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0.5rem 0.25rem;
+}
+
+label {
+  margin-right: 1rem;
+
+  @media only screen and (max-width: 565px) {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+}
+
+hgroup {
+  border-bottom: 3px dotted var(--grey-light);
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  p {
+    font-size: 1.35rem;
+  }
+}
+
+header,
+main {
+  border-bottom: 3px dotted var(--grey-light);
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 0.9;
+  margin: -4rem 0 1.5rem;
+
+  @media only screen and (max-width: 565px) {
+    font-size: 20vw;
+  }
+}
+
+.time {
+  width: 30px;
+  object-fit: contain;
+  transform: rotate(-15deg);
+}
+
+.potion {
+  width: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3.75rem rgb(255, 100, 200));
+  margin: auto;
+}
+
+.coin {
+  width: 40px;
+  filter: drop-shadow(0 0 0.75rem rgba(255, 200, 100, 0.75));
+}
+
+.info {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--space-m);
+  margin: auto;
+
+  figcaption {
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+}
+
+progress {
+  width: 100%;
+  border-radius: 20px;
+  max-width: 280px;
+  overflow: hidden;
+  height: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::-webkit-progress-bar {
+    background-color: var(--grey-light);
+  }
+  &::-webkit-progress-value {
+    background-color: var(--violet-base);
+  }
+  &::-moz-progress-bar {
+    background-color: var(--violet-base);
+  } /* Firefox */
+}
+
+.inventory {
+  display: flex;
+  gap: var(--space-m);
+
+  fieldset {
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 565px) {
+    flex-wrap: wrap;
+  }
+}
+
+meter {
+  --optimum: #0faae8;
+  --sub-optimum: #4caf50;
+  --sub-sub-optimum: #f20c52;
+
+  /* The gray background in Firefox */
+  display: block;
+  margin-top: 0.5rem;
+  height: 25px;
+  width: 100%;
+}
+
+/* The gray background in Chrome, etc. */
+meter::-webkit-meter-bar {
+  background: transparent;
+}
+
+/* The green (optimum) bar in Firefox */
+meter:-moz-meter-optimum::-moz-meter-bar {
+  background: var(--optimum);
+}
+
+/* The green (optimum) bar in Chrome etc. */
+meter::-webkit-meter-optimum-value {
+  background: var(--optimum);
+}
+
+/* The yellow (sub-optimum) bar in Firefox */
+meter:-moz-meter-sub-optimum::-moz-meter-bar {
+  background: var(--sub-optimum);
+}
+
+/* The yellow (sub-optimum) bar in Chrome etc. */
+meter::-webkit-meter-suboptimum-value {
+  background: var(--sub-optimum);
+}
+
+/* The red (even less good) bar in Firefox */
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  background: var(--sub-sub-optimum);
+}
+
+/* The red (even less good) bar in Chrome etc. */
+meter::-webkit-meter-even-less-good-value {
+  background: var(--sub-sub-optimum);
+}
+
+fieldset {
+  border: 1px solid var(--grey-light);
+}
+
+legend {
+  font-weight: 600;
+  font-size: var(--space-m);
+  letter-spacing: 0.05rem;
+}
+
+button {
+  width: fit-content;
+  margin: auto;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.15rem;
+  background-color: var(--violet-base);
+  cursor: pointer;
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.12);
+    cursor: not-allowed;
+  }
+}

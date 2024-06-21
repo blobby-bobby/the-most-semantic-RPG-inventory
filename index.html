@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>The most sementic RPG inventory page</title>
+  </head>
+  <body>
+    <header>
+      <figure>
+        <img
+          class="potion"
+          src="https://i.postimg.cc/qqvngjL6/potion1.png"
+          alt="Lova Maxima"
+        />
+        <figcaption>
+          <hgroup>
+            <h1>Lova Maxima</h1>
+            <p>
+              Also known as: <em>The Love Potion</em>
+              <span aria-hidden="true">♡</span>
+            </p>
+          </hgroup>
+          <p id="potion-description">
+            A small, ornate vial filled with a shimmering, rose-colored liquid,
+            exudes a delicate fragrance of blooming roses and summer nights.
+            Crafted by master alchemists, this rare potion ignites
+            <strong>intense passion</strong> and infatuation in the drinker for
+            the first person they see.
+          </p>
+        </figcaption>
+      </figure>
+    </header>
+    <main>
+      <figure class="info">
+        <img
+          class="time"
+          src="https://i.postimg.cc/xj36s1Ft/time.png"
+          alt="Time icon indicating duration of the potion"
+        />
+        <figcaption>
+          <p>
+            Lasts for: <strong><time datetime="PT24H">24 hours</time></strong>
+          </p>
+        </figcaption>
+      </figure>
+
+      <section class="stats">
+        <fieldset>
+          <legend>Taste</legend>
+          <div>
+            <label for="sourness">Sourness</label>
+            <progress id="sourness" max="100" value="10">10%</progress>
+          </div>
+
+          <div>
+            <label for="sweetness">Sweetness</label>
+            <progress id="sweetness" max="100" value="75">75%</progress>
+          </div>
+
+          <div>
+            <label for="acidity">Acidity</label>
+            <progress id="acidity" max="100" value="20">20%</progress>
+          </div>
+
+          <div>
+            <label for="spice">Spice</label>
+            <progress id="spice" max="100" value="34">34%</progress>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="stats">
+        <fieldset>
+          <legend>Effects</legend>
+          <div>
+            <label for="side-effects">Chance of side effects</label>
+            <progress id="side-effects" max="100" value="20">20%</progress>
+          </div>
+
+          <div>
+            <label for="success">Chance of success</label>
+            <progress id="success" max="100" value="90">90%</progress>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="inventory">
+        <section>
+          <fieldset>
+            <legend>Stock left</legend>
+            <label for="stock"><span id="numberOfItems"></span></label>
+            <meter
+              id="stock"
+              min="0"
+              max="15"
+              low="6"
+              high="12"
+              optimum="14"
+            ></meter>
+          </fieldset>
+        </section>
+
+        <section>
+          <fieldset>
+            <legend>Price</legend>
+            <figure class="info">
+              <img
+                class="coin"
+                src="https://i.postimg.cc/XYQxn10F/coin.png"
+                alt="Coin icon"
+              />
+              <figcaption>350 gils</figcaption>
+            </figure>
+          </fieldset>
+        </section>
+      </section>
+      <button id="buyPotion" aria-label="Buy a Potion">Buy a potion</button>
+    </main>
+    <footer>
+      <small
+        >The most accesible page, total number of div:
+        <span id="numberOfDivSpan"></span
+      ></small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -99,6 +99,7 @@ h1 {
 
 .time {
   width: 30px;
+  height: auto;
   object-fit: contain;
   transform: rotate(-15deg);
 }
@@ -112,9 +113,13 @@ h1 {
 
 .coin {
   width: 40px;
+  height: auto;
   filter: drop-shadow(0 0 0.75rem rgba(255, 200, 100, 0.75));
 }
 
+.price {
+  padding-top: 0.5rem;
+}
 .info {
   flex-direction: row;
   justify-content: flex-start;

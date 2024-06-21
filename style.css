@@ -8,6 +8,20 @@
   --space-m: 1.5rem;
 }
 
+@font-face {
+  font-family: "Platypi";
+  src: url("fonts/Platypi-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Platypi";
+  src: url("fonts/Platypi-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
   padding: 3rem 1rem;
   max-width: 600px;
@@ -20,8 +34,7 @@ body {
   place-items: center;
   font-family: "Platypi", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 

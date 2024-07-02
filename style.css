@@ -47,6 +47,27 @@ header {
   width: 100%;
 }
 
+hgroup {
+  border-bottom: 3px dotted var(--grey-light);
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  p {
+    font-size: 1.35rem;
+  }
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 0.9;
+  margin: -4rem 0 1.5rem;
+
+  @media only screen and (max-width: 565px) {
+    font-size: 20vw;
+  }
+}
+
 figure,
 main {
   display: flex;
@@ -63,6 +84,16 @@ fieldset div {
   margin: 0.5rem 0.25rem;
 }
 
+fieldset {
+  border: 1px solid var(--grey-light);
+}
+
+legend {
+  font-weight: 600;
+  font-size: var(--space-m);
+  letter-spacing: 0.05rem;
+}
+
 label {
   margin-right: 1rem;
 
@@ -72,31 +103,10 @@ label {
   }
 }
 
-hgroup {
-  border-bottom: 3px dotted var(--grey-light);
-  text-align: center;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-
-  p {
-    font-size: 1.35rem;
-  }
-}
-
 header,
 main {
   border-bottom: 3px dotted var(--grey-light);
   padding-bottom: 1rem;
-}
-
-h1 {
-  font-size: 6rem;
-  line-height: 0.9;
-  margin: -4rem 0 1.5rem;
-
-  @media only screen and (max-width: 565px) {
-    font-size: 20vw;
-  }
 }
 
 .time {
@@ -122,6 +132,7 @@ h1 {
 .price {
   padding-top: 0.5rem;
 }
+
 .info {
   flex-direction: row;
   justify-content: flex-start;
@@ -213,16 +224,6 @@ meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
 /* The red (even less good) bar in Chrome etc. */
 meter::-webkit-meter-even-less-good-value {
   background: var(--sub-sub-optimum);
-}
-
-fieldset {
-  border: 1px solid var(--grey-light);
-}
-
-legend {
-  font-weight: 600;
-  font-size: var(--space-m);
-  letter-spacing: 0.05rem;
 }
 
 button {

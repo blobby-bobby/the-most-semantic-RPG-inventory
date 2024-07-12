@@ -7,33 +7,29 @@
     <!-- Those meta tags are for SEO : just the basic stuff -->
     <meta
       name="description"
-      content="The most semantic RPG inventory page, this is a challenge of making the most accesible and semantic web page."
-    />
+      content="The most semantic RPG inventory page, this is a challenge of making the most accesible and semantic web page.">
     <meta
       name="keywords"
-      content="RPG, inventory, game, semantic, accessibility, HTML, potion"
-    />
+      content="RPG, inventory, game, semantic, accessibility, HTML, potion">
     <meta name="author" content="Blobby Bobby" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Those meta tags are for Open Graph, allowing the embedding of this page to be more visual, with its title, description, image, etc. -->
-    <meta property="og:title" content="The most semantic RPG inventory page" />
+    <meta property="og:title" content="The most semantic RPG inventory page">
     <meta
       property="og:description"
-      content="This challenge involves creating the most accessible and semantic RPG inventory page."
-    />
+      content="This challenge involves creating the most accessible and semantic RPG inventory page.">
     <meta
       property="og:image"
       content="https://i.postimg.cc/zvy5VMvM/sample-og-img.jpg"
-    />
+    >
     <meta
       property="og:url"
-      content="https://the-most-semantic-rpg-inventory.vercel.app/"
-    />
-    <meta name="og:type" content="website" />
-    <meta property="og:site_name" content="The semantic RPG inventory page" />
+      content="https://the-most-semantic-rpg-inventory.vercel.app/">
+    <meta name="og:type" content="website">
+    <meta property="og:site_name" content="The semantic RPG inventory page">
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 
     <!-- Those links are for preloading the local fonts, to avoid the flash of unstyled text, and for faster loading -->
     <link
@@ -41,8 +37,7 @@
       href="/fonts/Platypi-Light.ttf"
       as="font"
       type="font/ttf"
-      crossorigin
-    />
+      crossorigin>
 
     <link
       rel="preload"
@@ -50,33 +45,33 @@
       as="font"
       type="font/ttf"
       crossorigin
-    />
+    >
 
     <link
       rel="apple-touch-icon"
       sizes="120x120"
       href="./favicon/apple-touch-icon.png"
-    />
+    >
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./favicon/favicon-32x32.png"
-    />
+    >
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
       href="./favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./favicon/site.webmanifest" />
+    >
+    <link rel="manifest" href="./favicon/site.webmanifest">
     <link
       rel="mask-icon"
       href="./favicon/safari-pinned-tab.svg"
       color="#242b35"
-    />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+    >
+    <meta name="msapplication-TileColor" content="#da532c" >
+    <meta name="theme-color" content="#ffffff" >
     <title>The most semantic RPG inventory page</title>
   </head>
   <body>
@@ -125,78 +120,71 @@
         </figcaption>
       </figure>
 
-      <section class="stats">
+      <fieldset>
+        <legend>Taste</legend>
+        <div>
+          <label for="sourness">Sourness</label>
+          <progress id="sourness" max="100" value="10">10%</progress>
+        </div>
+
+        <div>
+          <label for="sweetness">Sweetness</label>
+          <progress id="sweetness" max="100" value="75">75%</progress>
+        </div>
+
+        <div>
+          <label for="acidity">Acidity</label>
+          <progress id="acidity" max="100" value="20">20%</progress>
+        </div>
+
+        <div>
+          <label for="spice">Spice</label>
+          <progress id="spice" max="100" value="34">34%</progress>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Effects</legend>
+        <div>
+          <label for="side-effects">Chance of side effects</label>
+          <progress id="side-effects" max="100" value="20">20%</progress>
+        </div>
+
+        <div>
+          <label for="success">Chance of success</label>
+          <progress id="success" max="100" value="90">90%</progress>
+        </div>
+      </fieldset>
+
+      <div class="inventory">
         <fieldset>
-          <legend>Taste</legend>
-          <div>
-            <label for="sourness">Sourness</label>
-            <progress id="sourness" max="100" value="10">10%</progress>
-          </div>
-
-          <div>
-            <label for="sweetness">Sweetness</label>
-            <progress id="sweetness" max="100" value="75">75%</progress>
-          </div>
-
-          <div>
-            <label for="acidity">Acidity</label>
-            <progress id="acidity" max="100" value="20">20%</progress>
-          </div>
-
-          <div>
-            <label for="spice">Spice</label>
-            <progress id="spice" max="100" value="34">34%</progress>
-          </div>
+          <legend>Stock left</legend>
+          <label for="stock"><span id="numberOfPotions"></span></label>
+          <meter
+            id="stock"
+            min="0"
+            max="15"
+            low="6"
+            high="12"
+            optimum="14"
+            value="14"
+          ></meter>
         </fieldset>
-      </section>
 
-      <section class="stats">
         <fieldset>
-          <legend>Effects</legend>
-          <div>
-            <label for="side-effects">Chance of side effects</label>
-            <progress id="side-effects" max="100" value="20">20%</progress>
-          </div>
-
-          <div>
-            <label for="success">Chance of success</label>
-            <progress id="success" max="100" value="90">90%</progress>
-          </div>
+          <legend>Price</legend>
+          <figure class="info price">
+            <img
+              class="coin"
+              src="https://i.postimg.cc/2SRwDHSj/coin.webp"
+              alt="Potion's price"
+              width="100"
+              height="106"
+            />
+            <figcaption>350 gils</figcaption>
+          </figure>
         </fieldset>
-      </section>
-
-      <section class="inventory">
-        <section>
-          <fieldset>
-            <legend>Stock left</legend>
-            <label for="stock"><span id="numberOfPotions"></span></label>
-            <meter
-              id="stock"
-              min="0"
-              max="15"
-              low="6"
-              high="12"
-              optimum="14"
-            ></meter>
-          </fieldset>
-        </section>
-
-        <section>
-          <fieldset>
-            <legend>Price</legend>
-            <figure class="info price">
-              <img
-                class="coin"
-                src="https://i.postimg.cc/2SRwDHSj/coin.webp"
-                alt="Potion's price"
-                width="100"
-                height="106"
-              />
-              <figcaption>350 gils</figcaption>
-            </figure>
-          </fieldset>
-        </section>
-      </section>
+      </div>
       <button id="buyPotion" aria-label="Buy a Potion">Buy a potion</button>
     </main>
     <footer>

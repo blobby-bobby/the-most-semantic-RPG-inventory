@@ -170,10 +170,6 @@ progress {
   display: flex;
   gap: var(--space-m);
 
-  fieldset {
-    height: 100%;
-  }
-
   @media only screen and (max-width: 565px) {
     flex-wrap: wrap;
   }
